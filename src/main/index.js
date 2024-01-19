@@ -8,8 +8,7 @@ const path = require('path');
 const batFilePathStartServer = join(__dirname, '..', '..', '..','backend', 'server', 'startServer.bat');
 const batFilePathCloseServer = join(__dirname, '..', '..', '..','backend', 'server', 'closeServer.bat');
 
-// const batFilePathStartServer = path.join(app.getAppPath(), 'backend', 'server', 'startServer.bat');
-// const batFilePathCloseServer = path.join(app.getAppPath(), 'backend', 'server', 'closeServer.bat');
+
 
 shell.openPath(batFilePathStartServer)
 
@@ -58,7 +57,7 @@ function createWindow() {
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
 
-  // shell.openPath(batFilePathStartServer)
+  
 
 
   // Set app user model id for windows
@@ -72,10 +71,12 @@ app.whenReady().then(() => {
   })
 
   // createWindow()
-    
+
   setTimeout(() => {
     createWindow();
-  }, 3000)
+  }, 5000)
+  
+
   
 
   app.on('activate', function () {
